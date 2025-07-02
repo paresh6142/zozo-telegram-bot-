@@ -30,6 +30,17 @@ app.post("/webhook", async (req, res) => {
 
   res.sendStatus(200);
 });
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Zozo bot is running!');
+});
+
+app.listen(port, () => {
+  console.log(`Server started on http://localhost:${port}`);
+});
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
